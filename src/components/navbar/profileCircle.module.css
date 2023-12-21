@@ -1,0 +1,49 @@
+.dropdown {
+  position: relative;
+  padding: 0;
+  margin-right: 1em;
+}
+
+.dropdown summary {
+  list-style: none;
+  list-style-type: none;
+}
+
+.dropdown > summary::-webkit-details-marker {
+  display: none;
+}
+
+.dropdown summary:focus {
+  outline: none;
+}
+
+.dropdown summary:focus a.button {
+  border: 2px solid white;
+}
+
+.dropdown ul {
+  white-space: nowrap;
+  position: absolute;
+  right: 0;
+  box-sizing: border-box;
+  z-index: 2;
+  border-radius: 6px;
+  list-style: none;
+}
+
+/* Close the dropdown with outside clicks */
+.dropdown > summary::before {
+  display: none;
+}
+
+.dropdown[open] > summary::before {
+    content: ' ';
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
